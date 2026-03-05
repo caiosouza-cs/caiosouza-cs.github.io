@@ -1,0 +1,128 @@
+.experiencia {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 50px 40px 100px 40px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  box-sizing: border-box;
+  position: relative;
+  
+}
+
+.experiencia .subtitulo {
+  color: #EDEDED;
+}
+
+.experiencia-texto {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  margin-bottom: 40px;
+  color: #2E2E2E;
+  max-width: 40ch;
+}
+
+.empresa {
+  position: relative;
+  background: #EDEDED;
+  margin: 20px 0px;
+  padding: 20px;
+  border: #DEDEDE solid 2px;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap:10px 60px;
+}
+
+.empresa-ano {
+  position: absolute;
+  left: -60px;
+  top: 22px;
+  color: #717171;
+}
+
+.empresa-titulo {
+  color: #2E2E2E;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.empresa-texto {
+  font-size: 1rem;
+  line-height: 26px;
+  margin-top: 10px;
+}
+
+.empresa-habilidades {
+  display: flex;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.empresa-habilidades li {
+  padding: 10px 10px;
+  font-size: 14px;
+  background: #fff;
+  border: #F7F7F7 solid 1px;
+  border-radius: 5px;
+}
+
+h3.empresa-titulo {
+  position: relative;
+}
+
+h3.empresa-titulo::before {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 15px;
+  background: #70DA1C;
+  top: 5px;
+  left: -25px;
+}
+
+.experiencia::before {
+  content: '';
+  position: absolute;
+  background-image: url('../img/Quadriculado.svg');
+  width: 40px;
+  height: 40px;
+  display: block;
+  background-size: cover;
+  bottom: 20px;
+  left: 50px;
+}
+
+@media (width < 1000px) {
+  .experiencia {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .experiencia .subtitulo {
+    color: #2E2E2E;
+  }
+
+  .empresa-ano {
+    position: initial;
+    order: 1;
+  }
+
+  .experiencia-texto {
+    font-size: 1.25rem;
+  }
+}
+
+@media (width < 800px) {
+    .experiencia-texto {
+    font-size: 1.2rem;
+    max-width: 30ch;
+  }
+}
+
+@media (width < 700px) {
+  .empresa {
+    grid-template-columns: 1fr;
+  }
+}

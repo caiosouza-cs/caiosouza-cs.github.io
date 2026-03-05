@@ -1,0 +1,99 @@
+.introducao {
+  max-width: 1300px;
+  padding: 100px 40px 50px 40px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.introducao h1 {
+  font-size: 4.5rem;
+  line-height: 1.125;
+  margin-bottom: 30px;
+  position: relative;
+  color: #0E0E0E;
+}
+
+.introducao .foto {
+  width: 360px;
+}
+
+.localizacao {
+  display: flex;
+  gap: 10px;
+  font-size: 2rem;
+  color: #717171;
+   position: relative;
+}
+
+
+.introducao h1::before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 60px;
+  height: 20px;
+  background: linear-gradient(#70DA1C, #70DA5C);
+  background-size: cover;
+  z-index: -1;
+  top: -30px;
+}
+
+.localizacao::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-image: url('/img/Quadriculado.svg');
+  background-size: cover;
+  right: 20px;
+  bottom: -50px;
+}
+
+
+@media (width < 1000px) {
+ .introducao h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+ }
+
+ .introducao {
+  gap: 60px
+ }
+
+ .localizacao {
+  font-size: 1.5rem;
+ }
+}
+
+@media (width < 800px) {
+  .introducao h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  .introducao {
+    gap: 40px;
+  }
+
+  .localizacao {
+  font-size: 1rem;
+ }
+}
+
+
+@media (width < 600px) {
+ 
+
+  .introducao {
+    grid-template-columns: 1fr;
+  }
+
+  .introducao .foto {
+    display: none;
+  }
+}
