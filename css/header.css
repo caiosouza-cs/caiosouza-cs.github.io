@@ -44,3 +44,22 @@
   }
 }
 
+
+.logo {
+  
+  font-size: 48px;
+  background-image: url('../img/ilusao.jpg');
+  background-size: cover;
+  background-clip: text;
+  color: transparent;
+  animation: animate 20s linear infinite;
+  text-transform: uppercase;
+  font-weight: bold;
+  
+}
+
+  @keyframes animate {
+    to {
+      background-position-x: -500px;
+    }
+  }
